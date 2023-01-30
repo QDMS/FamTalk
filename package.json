@@ -5,14 +5,19 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "lint": "eslint .",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "start": "react-native start",
     "test": "jest"
   },
   "dependencies": {
+    "@types/react-native-video": "^5.0.14",
     "react": "18.2.0",
+    "react-hook-form": "^7.42.1",
     "react-native": "0.71.1",
-    "react-native-vector-icons": "^9.2.0"
+    "react-native-image-picker": "^5.0.1",
+    "react-native-vector-icons": "^9.2.0",
+    "react-native-video": "^5.2.0",
+    "expo": "^47.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -20,9 +25,11 @@
     "@babel/runtime": "^7.20.0",
     "@react-native-community/eslint-config": "^3.0.0",
     "@tsconfig/react-native": "^2.0.2",
+    "@types/babel__core": "^7.20.0",
     "@types/jest": "^29.2.1",
     "@types/react": "^18.0.24",
     "@types/react-native-vector-icons": "^6.4.13",
+    "@types/react-native-video": "^5.0.10",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.2.1",
     "eslint": "^8.19.0",
@@ -32,7 +39,18 @@
     "react-test-renderer": "18.2.0",
     "typescript": "4.8.4"
   },
+  "resolutions": {
+    "@types/react": "^17"
+  },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }
