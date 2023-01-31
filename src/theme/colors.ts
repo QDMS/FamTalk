@@ -4,6 +4,8 @@ const colors = {
   midGrey: '#707070',
   error: '#ED4956',
   holly: '#668F9E',
+  oxyn: '#353935',
+  holywhite: '#f5f5dc',
 
   white: '#fff',
   black: '#000',

@@ -11,6 +11,8 @@ import {useState} from 'react';
 import DoublePressable from './../DoublePressable/index';
 import Carousel from '../Carousel';
 import VideoPlayer from '../VideoPlayer';
+import { FeedNavigationProp } from '../../navigation/types';
+import { useNavigation } from '@react-navigation/native';
 
 interface IFeedPost {
   post: IPost;
@@ -20,6 +22,17 @@ interface IFeedPost {
 const FeedPost = ({post, isVisible}: IFeedPost) => {
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
+
+  const navigation = useNavigation<FeedNavigationProp>();
+
+  const navigateToUser = () => {
+    // navigate
+    navigation.navigate("UserProfile", {userId: post.user.id});
+  };
+
+  const navigateToComments = () => {
+    navigation.navigate("Comments", {postId: post.id})
+  }
 
   const toggleDescriptionExpanded = () => {
     setIsDescriptionExpanded(v => !v);
@@ -61,7 +74,7 @@ const FeedPost = ({post, isVisible}: IFeedPost) => {
           }}
           style={styles.userAvatar}
         />
-        <Text style={styles.userName}>{post.user.username}</Text>
+        <Text onPress={navigateToUser} style={styles.userName}>{post.user.username}</Text>
         <Entypo
           name="dots-three-horizontal"
           size={16}
@@ -123,7 +136,7 @@ const FeedPost = ({post, isVisible}: IFeedPost) => {
         </Text>
 
         {/*Comments*/}
-        <Text style={{color: colors.midGrey}}>
+        <Text onPress={navigateToComments} style={{color: colors.midGrey}}>
           View all {post.nofComments} comments
         </Text>
         {post.comments.map(comment => (

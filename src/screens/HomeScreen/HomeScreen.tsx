@@ -1,7 +1,7 @@
 import {FlatList, ViewabilityConfig, ViewToken, StyleSheet} from 'react-native';
 import FeedPost from '../../components/FeedPost';
 import posts from '../../assets/data/posts.json';
-import { useRef, useState } from 'react';
+import {useRef, useState} from 'react';
 
 const HomeScreen = () => {
   const [activePostId, setActivePostId] = useState<string | null>(null);
@@ -19,23 +19,23 @@ const HomeScreen = () => {
   );
 
   return (
-
-      <FlatList
-        style={styles.bgColor}
-        data={posts}
-        renderItem={({item}) => <FeedPost post={item} isVisible={activePostId === item.id} />}
-        showsVerticalScrollIndicator ={false}
-        viewabilityConfig={viewabilityConfig}
-        onViewableItemsChanged={onViewableItemsChanged.current}
-      />
-   
+    <FlatList
+      style={styles.bgColor}
+      data={posts}
+      renderItem={({item}) => (
+        <FeedPost post={item} isVisible={activePostId === item.id} />
+      )}
+      showsVerticalScrollIndicator={false}
+      viewabilityConfig={viewabilityConfig}
+      onViewableItemsChanged={onViewableItemsChanged.current}
+    />
   );
 };
 
 const styles = StyleSheet.create({
   bgColor: {
-      backgroundColor: '#f5f5dc'
-  }
-})
+    backgroundColor: '#f5f5dc',
+  },
+});
 
 export default HomeScreen;
