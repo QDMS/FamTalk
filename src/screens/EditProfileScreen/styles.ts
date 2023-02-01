@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet, Dimensions } from "react-native";
 import colors from '../../theme/colors';
 import fonts from '../../theme/fonts';
 
@@ -6,7 +6,8 @@ export default StyleSheet.create({
   page: {
     alignItems: 'center',
     padding: 10,
-   
+    backgroundColor: '#f5f5dc',
+    minHeight: Dimensions.get('screen').height
   },
   avatar: {
     width: '30%',

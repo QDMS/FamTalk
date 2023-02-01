@@ -16,9 +16,9 @@ const VideoPlayer = ({uri, paused = false}: IVideoPlayer) => {
       <Video
         paused={paused}
         muted={muted}
-        source={{uri}}
+        source={require('./ShowOff.mp4')}
         style={styles.video}
-        resizeMode="cover"
+        resizeMode="stretch"
         repeat
       />
 
@@ -36,7 +36,7 @@ const VideoPlayer = ({uri, paused = false}: IVideoPlayer) => {
 const styles = StyleSheet.create({
   video: {
     width: '100%',
-    aspectRatio: 1,
+    aspectRatio: 1.5,
   },
   muteButton: {
     position: 'absolute',

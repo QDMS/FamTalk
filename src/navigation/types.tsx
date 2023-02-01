@@ -15,6 +15,12 @@ export type BottomTabNavigatorParamList = {
   MyProfile: undefined;
 };
 
+export type SearchTabNavigatorParamList = {
+  Users: undefined;
+  Post: undefined;
+ 
+};
+
 export type MyProfileNavigationProp = BottomTabNavigationProp<
   BottomTabNavigatorParamList,
   'MyProfile'

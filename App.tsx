@@ -7,7 +7,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import Navigation from './src/navigation/index';
 
 const App = () => {
-  return <Navigation />;
+  return (
+  <Navigation />
+  );
 };
 
 export default App;

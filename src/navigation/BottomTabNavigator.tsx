@@ -1,6 +1,4 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import HomeScreen from '../screens/HomeScreen/HomeScreen';
-import ProfileScreen from './../screens/ProfileScreen/ProfileScreen';
 import PostUploadScreen from './../screens/PostUploadScreen/PostUploadScreen';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -8,8 +6,8 @@ import colors from '../theme/colors';
 import {Image} from 'react-native';
 import HomeStackNavigator from './HomeStackNavigator';
 import ProfileStackNavigator from './ProfileStackNavigator';
-import { BottomTabNavigatorParamList } from './types';
-
+import {BottomTabNavigatorParamList} from './types';
+import SearchTabNavigator from './SearchTabNavigator';
 
 const logo = require('../assets/images/logo.png');
 
@@ -42,7 +40,7 @@ const BottomTabNavigator = () => {
       />
       <Tab.Screen
         name="Search"
-        component={HomeScreen}
+        component={SearchTabNavigator}
         options={{
           headerTitle: HeaderTitle,
           headerTitleAlign: 'center',
