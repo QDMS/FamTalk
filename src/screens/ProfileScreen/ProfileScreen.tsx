@@ -9,7 +9,7 @@ import {
   MyProfileRouteProp,
   MyProfileNavigationProp,
   UserProfileNavigationProp,
-} from '../../navigation/types';
+} from '../../types/navigation';
 import {useRoute, useNavigation} from '@react-navigation/native';
 
 const ProfileScreen = () => {

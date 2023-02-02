@@ -11,7 +11,7 @@ import {useState} from 'react';
 import DoublePressable from './../DoublePressable/index';
 import Carousel from '../Carousel';
 import VideoPlayer from '../VideoPlayer';
-import { FeedNavigationProp } from '../../navigation/types';
+import { FeedNavigationProp } from '../../types/navigation';
 import { useNavigation } from '@react-navigation/native';
 
 interface IFeedPost {

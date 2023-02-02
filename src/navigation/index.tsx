@@ -6,7 +6,8 @@ import {Image} from 'react-native';
 import colors from './../theme/colors';
 import BottomTabNavigator from './BottomTabNavigator';
 import CommentsScreen from './../screens/CommentsScreen/CommentsScreen';
-import {RootNavigatorParamList} from './types';
+import {RootNavigatorParamList} from '../types/navigation';
+import AuthStackNavigator from './AuthStackNavigator';
 
 const logo = require('../assets/images/logo.png');
 
@@ -35,7 +36,14 @@ const linking: LinkingOptions<RootNavigatorParamList> = {
 const Navigation = () => {
   return (
     <NavigationContainer linking={linking}>
-      <Stack.Navigator initialRouteName="BottomNav">
+      <Stack.Navigator initialRouteName="Auth">
+        <Stack.Screen
+        name="Auth"
+        component={AuthStackNavigator}
+        options={{
+          headerShown: false,
+        }}
+        />
         <Stack.Screen
           name="BottomNav"
           component={BottomTabNavigator}

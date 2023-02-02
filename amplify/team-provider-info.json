@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-famtalk-staging-183801-authRole",
+      "UnauthRoleArn": "arn:aws:iam::270878344151:role/amplify-famtalk-staging-183801-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::270878344151:role/amplify-famtalk-staging-183801-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-famtalk-staging-183801-deployment",
+      "UnauthRoleName": "amplify-famtalk-staging-183801-unauthRole",
+      "StackName": "amplify-famtalk-staging-183801",
+      "StackId": "arn:aws:cloudformation:us-east-1:270878344151:stack/amplify-famtalk-staging-183801/8e9f22a0-a25f-11ed-8e6e-120dccfce243",
+      "AmplifyAppId": "d396fh88uzr6la"
+    },
+    "categories": {
+      "auth": {
+        "FamTalk": {}
+      }
+    }
+  }
+}

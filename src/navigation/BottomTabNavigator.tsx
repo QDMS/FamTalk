@@ -6,7 +6,7 @@ import colors from '../theme/colors';
 import {Image} from 'react-native';
 import HomeStackNavigator from './HomeStackNavigator';
 import ProfileStackNavigator from './ProfileStackNavigator';
-import {BottomTabNavigatorParamList} from './types';
+import {BottomTabNavigatorParamList} from '../types/navigation';
 import SearchTabNavigator from './SearchTabNavigator';
 
 const logo = require('../assets/images/logo.png');
